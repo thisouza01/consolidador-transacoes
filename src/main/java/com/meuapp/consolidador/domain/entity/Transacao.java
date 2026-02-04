@@ -35,10 +35,10 @@ public class Transacao {
     @Column(name = "status")
     private StatusTransacao statusTransacao;
 
-    @Column(name = "motivo_rejeicao")
+    @Column(name = "motivo_rejeicao", length =  500)
     private String motivoRejeicao;
 
-    @Column(name = "hash_duplicada")
+    @Column(name = "hash_duplicada", unique = true)
     private String hashDuplicada;
 
     @Column(name = "data_processamento")
